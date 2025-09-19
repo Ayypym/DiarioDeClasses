@@ -1,11 +1,20 @@
 package com.senai.diariodeclasse.data
 
-import android.R
+import com.senai.diariodeclasse.R
 
 class DataSource() {
-    fun loadAluno(): List<Aluno>{
-        return listOf<Aluno>(
-            Aluno("Beatriz", R.drawable)
+    fun carregarAlunos(): List<Aluno>{
+        return listOf(Aluno(
+            "Joana Marta",
+            R.drawable.lauma_icon,
+            "Desenvolvimento de Sistemas"
+        ),
+            Aluno(
+                "Lauma",
+                R.drawable.lauma_icon,
+                "Sacerdotisa da Lua"
+            )
+
         )
     }
 }
