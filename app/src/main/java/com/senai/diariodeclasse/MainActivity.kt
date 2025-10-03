@@ -1,7 +1,9 @@
 package com.senai.diariodeclasse
 
 import android.R
+import android.nfc.Tag
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -62,8 +64,14 @@ import androidx.compose.ui.graphics.Outline
 
 
 class MainActivity : ComponentActivity() {
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        val TAG= "MainActivity"
         super.onCreate(savedInstanceState)
+        Log.e(TAG,"onCreate Called")
         enableEdgeToEdge()
         setContent {
             DiarioDeClasseTheme {
@@ -80,19 +88,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Preview
-@Composable
-fun DiarioDeClassePreviewDark(){
-    DiarioDeClasseTheme {
-        Scaffold (modifier = Modifier.fillMaxSize()){ innerPadding ->
-            DiarioDeClasseApp(
-                modifier = Modifier
-                    .padding(innerPadding)
-                    .fillMaxSize()
-            )
-        }
-    }
-}
+
 
 @Preview(showSystemUi = true)
 @Composable
@@ -152,7 +148,7 @@ fun CardAluno(
     Card (
         modifier = modifier
             .fillMaxWidth()
-            .padding(16.dp)
+            .padding(18.dp)
             .animateContentSize(
                 animationSpec = spring(
                     dampingRatio = Spring.DampingRatioLowBouncy,

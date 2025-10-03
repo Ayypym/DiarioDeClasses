@@ -18,8 +18,12 @@ class DataSource() {
                 "Saori",
                 R.drawable.aino,
                 "Atriz do NemMfx"
+            ),
+            Aluno(
+                "Eloá",
+                R.drawable.alice,
+                "Toque de Tucana Trans"
             )
-
 
         )
     }
